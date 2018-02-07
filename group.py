@@ -1,4 +1,4 @@
-'''
+
 a = "I love to code"
 b = ""
 print a.capitalize()
@@ -8,6 +8,7 @@ print a.count('o')
 print a.find('l')
 print a.index('e')
 
+'''
 e,f,g,h = a.split(" ")
 print e
 print f
@@ -19,7 +20,7 @@ print b.join(a)
 print a.replace("code", "pingpong")
 
 print("I love {} code".format("aaa"))
-'''
+
 
 a = [3,1,6,8,5,2,8, "hello"]
 print len(a)
@@ -39,3 +40,4 @@ a.extend([5,4])
 print a
 a.sort()
 print a
+'''
