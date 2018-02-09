@@ -17,7 +17,7 @@ class CallCenter(object):
 	"""docstring for CallCenter"""
 	def __init__(self):
 		self.calls = []
-		self.queue = len(self.calls)
+		self.queue = 0
 	def add(self, x):
 		self.calls.append(x)
 		self.queue = len(self.calls)

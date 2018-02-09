@@ -1,10 +1,10 @@
 class Patient(object):
 	"""docstring for Patient"""
-	def __init__(self, idnum, name, aller, bednum):
+	def __init__(self, idnum, name, aller):
 		self.idnum = idnum
 		self.name = name
 		self.aller = aller
-		self.bednum = bednum
+		self.bednum = 0
 class Hospital(object):
 	"""docstring for Hospital"""
 	def __init__(self, name, capacity):
@@ -13,11 +13,12 @@ class Hospital(object):
 		self.records = []
 		self.patients = []
 
-	def admit(self, x):
+	def admit(self, x, y):
 		if len(self.patients) == self.capacity:
 			print "Hospital is Full"
 		else:
 			self.patients.append(x)
+			x.bednum = y
 			print "Admission is complete"
 		return self
 	def discharge(self, y):
@@ -30,10 +31,10 @@ class Hospital(object):
 		if counter == 0:
 			print "Patient not found"
 
-a = Patient(1, "bryant", "shrimp", 1)
-b = Patient(2, "bryant", "shrimp", 2)
-c = Patient(3, "yaboi", "shrimp", 3)
-f = Patient(4, "bryant", "shrimp", 4)
+a = Patient(1, "bryant", "shrimp")
+b = Patient(2, "bryant", "shrimp")
+c = Patient(3, "yaboi", "shrimp",)
+f = Patient(4, "bryant", "shrimp")
 d = Hospital("hey", 3)
 d.admit(a).admit(b).admit(c).admit(f)
 d.discharge(5)

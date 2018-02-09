@@ -28,7 +28,3 @@ class Dragon(Animal):
 	def display(self):
 		self.displayhealth()
 		print "I am a Dragon"
-
-labrador = Dog("labrador")
-a = Dragon("tiny")
-labrador.fly()
